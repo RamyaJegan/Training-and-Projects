@@ -1,0 +1,28 @@
+<mat-card class="demo-panel" style="background-image: url('assets/a.jpg'); "> 
+  <!-- <mat-card-title>
+    Angular Material Sidenav Demo
+  </mat-card-title> -->
+  
+  <div class="example-sidenav-content" >
+    <button type="button" mat-button (click)="sidenav.open()" (click)="open()" id="open">
+      <img src="./assets/c.png" width=40px hegiht=40px class="img1">
+    </button>
+    <button type="button" mat-button (click)="sidenav.close()" (click)="close()" id="close">
+      <img src="./assets/open.png" width=40px hegiht=40px class="img">
+    </button>
+  </div>
+  <mat-card-content>
+    <mat-sidenav-container >
+      <mat-sidenav #sidenav class="example-sidenav">
+        <div class="text" (click)="show()">Alert a message</div>
+        <div  class="text" (click)="display()"><a routerLink="profile" >This is my First Sidenav</a></div>
+        <div  class="text" (click)="sidenav.close()">Close</div>
+      </mat-sidenav> 
+      
+    
+    </mat-sidenav-container>
+  </mat-card-content>
+  <div class="example-sidenav-content1" id="disp">
+    <router-outlet></router-outlet>
+  </div>
+ </mat-card>

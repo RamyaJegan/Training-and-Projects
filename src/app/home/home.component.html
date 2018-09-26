@@ -1,0 +1,58 @@
+<div class="container">
+<table  style="border:1px solid #ddd;" class="table">
+  <thead>
+    <tr colspan="1">
+      <th><button class="btn" data-toggle="modal" data-target="#myModal" (click)="clear()" >Add</button></th>     
+    </tr>
+    <tr>
+    <th>Serial #</th>
+    <th>Item Name</th>
+    <th>Components</th>
+    <th>Panel</th>
+    <th>Parts</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr></thead>
+  <tbody *ngFor="let item of items"><tr>
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.component}}</td>
+      <td>{{item.panel}}</td>
+      <td>{{item.parts}}</td>
+      <td><button class="btn"  data-toggle="modal" data-target="#myModal"  (click)="edit(item)">Edit</button></td>
+      <td><button class="btn" (click)="delete(item)" ng-modal="hide">Delete</button></td>
+  </tr>
+</tbody>
+</table>
+
+  <div class="modal fade" id="myModal" role="Add and Remove note" >
+   
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+
+                <div class="align"><label class="lab">Item Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.name"></div></div>
+                <div class="align"><label class="lab">Comp Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.component"></div></div>
+                <div class="align"><label class="lab">Part Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.parts"></div></div>
+                <div class="align"><label class="lab">Pane Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.panel"></div></div>
+
+            </div>
+            <div class="modal-footer"  >
+              <button type="button" class="btn btn-default" data-dismiss="modal" (click)="update(item)" *ngIf="show;">Update</button>
+               <button type="button" class="btn btn-default" data-dismiss="modal" (click)="add()" *ngIf="hide;">Add</button> 
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    
+</div>
+
+  
+

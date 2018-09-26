@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>ITEM PROFILE EDITED LIST</h1>
+      <table  style="border:1px solid #ddd;" class="table">
+        <thead>
+         
+          <tr>
+          <th>Serial #</th>
+          <th>Item Name</th>
+          <th>Components</th>
+          <th>Panel</th>
+          <th>Parts</th>
+         
+        </tr></thead>
+        <tbody *ngFor="let item of items"></tbody><tr>
+
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.component}}</td>
+            <td>{{item.panel}}</td>
+            <td>{{item.parts}}</td>
+            
+        </tr>
+      </tbody>
+      </table>
+      <button class="btn" (click)="back()">BACK</button>
+      </div>
+  

@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>ITEM PROFILE ADDED LIST {{sub}}</h1>
+    <table  style="border:1px solid #ddd;" class="table">
+      <thead>
+       
+        <tr>
+        <th>Serial #</th>
+        <th>Item Name</th>
+        <th>Components</th>
+        <th>Panel</th>
+        <th>Parts</th>
+       
+      </tr></thead>
+      <tbody ><tr>
+        
+          <td>{{items[sub].id}}</td>
+          <td>{{items[sub].name}}</td>
+          <td>{{items[sub].component}}</td>
+          <td>{{items[sub].panel}}</td>
+          <td>{{items[sub].parts}}</td>
+          
+      </tr>
+    </tbody>
+    </table>
+    <button class="btn" (click)="back()">BACK</button>
+    </div>
