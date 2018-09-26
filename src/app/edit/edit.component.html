@@ -1,27 +1,31 @@
-<div class="container">
-    <h1>ITEM PROFILE EDITED LIST</h1>
-      <table  style="border:1px solid #ddd;" class="table">
-        <thead>
-         
-          <tr>
-          <th>Serial #</th>
-          <th>Item Name</th>
-          <th>Components</th>
-          <th>Panel</th>
-          <th>Parts</th>
-         
-        </tr></thead>
-        <tbody *ngFor="let item of items"></tbody><tr>
+<div class="container" style="background-color: #fff">
+  <div id="myModal" role="Add and Remove note" >
+   
+    <div class="dialog">
+    
+      <!-- Modal content-->
+      <div class="content">
+        <div class="header">
+         <h5>UPDATE</h5>
+          
+        </div>
+        <div class="body">
 
-            <td>{{item.id}}</td>
-            <td>{{item.name}}</td>
-            <td>{{item.component}}</td>
-            <td>{{item.panel}}</td>
-            <td>{{item.parts}}</td>
-            
-        </tr>
-      </tbody>
-      </table>
-      <button class="btn" (click)="back()">BACK</button>
+            <div class="align"><label class="lab">Item Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.name"></div></div>
+            <div class="align"><label class="lab">Comp Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.component"></div></div>
+            <div class="align"><label class="lab">Part Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.parts"></div></div>
+            <div class="align"><label class="lab">Pane Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.panel"></div></div>
+
+        </div>
+        <div class="footer"  >
+          <button type="button" class="btn" (click)="update(item)">Update</button>
+          <button class="btn" (click)="back()">BACK</button>
+        </div>
       </div>
-  
+      
+    </div>
+  </div>
+
+
+    
+</div>

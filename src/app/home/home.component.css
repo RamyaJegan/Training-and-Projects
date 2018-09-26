@@ -45,5 +45,12 @@ label {
 }
 .align{
     
-    margin-left:50px;
+    margin-left:20px !important;
+}
+.header{
+    margin-top:5px;
+    border-bottom:1px solid #ddd !important;
+}
+.body{
+    margin:10px;
 }

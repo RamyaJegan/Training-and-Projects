@@ -1,26 +1,31 @@
-<div class="container">
-  <h1>ITEM PROFILE ADDED LIST {{sub}}</h1>
-    <table  style="border:1px solid #ddd;" class="table">
-      <thead>
-       
-        <tr>
-        <th>Serial #</th>
-        <th>Item Name</th>
-        <th>Components</th>
-        <th>Panel</th>
-        <th>Parts</th>
-       
-      </tr></thead>
-      <tbody ><tr>
-        
-          <td>{{items[sub].id}}</td>
-          <td>{{items[sub].name}}</td>
-          <td>{{items[sub].component}}</td>
-          <td>{{items[sub].panel}}</td>
-          <td>{{items[sub].parts}}</td>
+<div class="container" style="background-color: #fff">
+  <div id="myModal" role="Add and Remove note" >
+   
+    <div class="dialog">
+    
+      <!-- Modal content-->
+      <div class="content">
+        <div class="header">
+         <h5>ADD</h5>
           
-      </tr>
-    </tbody>
-    </table>
-    <button class="btn" (click)="back()">BACK</button>
+        </div>
+        <div class="body">
+
+            <div class="align"><label class="lab">Item Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.name"></div></div>
+            <div class="align"><label class="lab">Comp Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.component"></div></div>
+            <div class="align"><label class="lab">Part Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.parts"></div></div>
+            <div class="align"><label class="lab">Pane Name:</label><div><input type="text" class="notes_text" [(ngModel)]="item.panel"></div></div>
+
+        </div>
+        <div class="footer"  >
+          <button type="button" class="btn" (click)="add(item)">Add</button>
+          <button class="btn" (click)="back()">BACK</button>
+        </div>
+      </div>
+      
     </div>
+  </div>
+
+
+    
+</div>

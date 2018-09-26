@@ -1,0 +1,56 @@
+.table{
+    background-color:#ffffff;
+   text-align:center;
+    margin-top:20%;
+    padding:5px;
+}
+.table thead th{
+    text-align:center;
+      padding:5px;
+      /* border-bottom:1px solid #ddd; */
+ }
+ .table tbody td{
+    text-align:center;
+      padding:15px;
+ }
+ .btn{
+     background-color: royalblue;
+     color:#ffffff;
+     text-align:center;
+     width:100px;
+     height:30px;
+     border-radius:3px;
+     border:1px solid royalblue;
+ }
+ button{
+     outline:none;
+ }
+ 
+ 
+  .backdrop {
+    background-color:rgba(0,0,0,0.6);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+}
+.notes_text{
+    margin:20px;
+}
+label {
+    display: inline-block;
+    margin-left: 5px;
+    padding-right:30px;
+}
+.align{
+    
+    margin-left:20px !important;
+}
+.header{
+    margin-top:5px;
+    border-bottom:1px solid #ddd !important;
+}
+.body{
+    margin:10px;
+}

@@ -16,11 +16,22 @@ export class AddComponent implements OnInit {
   
  
   ngOnInit() {
-    this.sub = this.route.snapshot.queryParamMap.get("id");
-    this.sub=this.sub-1;
-   console.log("id",this.sub)
-
+  //   this.sub = this.route.snapshot.queryParamMap.get("id");
+  //   this.sub=this.sub-1;
+  //  console.log("id",this.sub)
+  this.item={id:null,name:"",component:"",panel:"",parts:null,value: ""}; 
   }
+  add(item){
+    // edit_item={id:null,name:"",component:"",panel:"",parts:null,value: ""}; 
+     console.log("Before add:",item);
+     const myObjStr = JSON.stringify(this.item);
+     let data=JSON.parse(myObjStr)
+     data.id=this.items.length+1;
+     this.items.push(data);
+     item=data;
+     console.log("after add:",item);
+     this.router.navigate(['/profile']);
+   }  
 
   back(){
     this.location.back();

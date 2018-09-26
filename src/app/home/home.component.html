@@ -1,8 +1,9 @@
-<div class="container">
+
 <table  style="border:1px solid #ddd;" class="table">
   <thead>
     <tr colspan="1">
-      <th><button class="btn" data-toggle="modal" data-target="#myModal" (click)="clear()" >Add</button></th>     
+      <!-- <th><button class="btn" data-toggle="modal" data-target="#myModal" (click)="clear()"  >Add</button></th>      -->
+      <th><button class="btn" routerLink="/add">Add</button></th> 
     </tr>
     <tr>
     <th>Serial #</th>
@@ -19,7 +20,8 @@
       <td>{{item.component}}</td>
       <td>{{item.panel}}</td>
       <td>{{item.parts}}</td>
-      <td><button class="btn"  data-toggle="modal" data-target="#myModal"  (click)="edit(item)">Edit</button></td>
+      <!-- <td><button class="btn"  data-toggle="modal" data-target="#myModal"  (click)="edit(item)">Edit</button></td> -->
+      <td><button class="btn" (click)="edit(item)">Edit</button></td> 
       <td><button class="btn" (click)="delete(item)" ng-modal="hide">Delete</button></td>
   </tr>
 </tbody>
@@ -51,8 +53,7 @@
           
         </div>
       </div>
-    
-</div>
+
 
   
 
